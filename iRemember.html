@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>I</title>
+	
+</head>
+<body>
+<section id=""></section>
+<div id="">
+	<button id="Take">Получить карту</button>
+	<button id="throwAll">Пас</button>
+</div>
+<div>Ваш счет</div>
+<div id="score"></div>
+<div>Ваши карты</div>
+<div id="rand"></div>
+<script>
+const take = document.getElementById("Take")
+const score = document.getElementById("score")
+const rand = document.getElementById("rand")
+const throwAll = document.getElementById("throwAll")
+
+
+let i=0
+	const onClick = function (event) {
+		event.preventDefault()
+		const mas = +((Math.random()*10).toFixed(0))+1
+		i+=+mas
+		score.innerHTML = i
+		const place = document.createElement("div")
+		rand.prepend(place)
+		place.innerHTML = mas
+	}
+take.addEventListener("click", onClick)
+
+ let t=0
+const onClick2 = function(event){
+	event.preventDefault()
+	function II(){ 
+		do{
+		if(t>=18)break
+		const mas = +((Math.random()*10).toFixed(0))+1
+		t+=+mas
+		console.log(t)
+	}while(true)
+	const mas1 = +((Math.random()*10).toFixed(0))+1
+	let n = t+ mas1
+	console.log(n)
+this.getII = function(){
+	return n
+}}
+const ii = new II()
+const a = ii.getII() 
+console.log(a)
+console.log(i)
+if(i<=21&&a!==21){
+	alert("Вы выиграли!")
+}
+if(i==21&&a==21){
+	alert("Ничья!")
+}
+if(i<a&&a<=21){
+	alert("you lose")
+}
+if(i<=21&&a>22){
+	alert("Вы выиграли!")
+}
+if(i>22){alert("you lose")}
+	score.innerHTML = ""
+	rand.innerHTML = ""
+	i=0
+	t=0
+}
+throwAll.addEventListener("click", onClick2)
+
+</script>
+
+</body>
+</html>
